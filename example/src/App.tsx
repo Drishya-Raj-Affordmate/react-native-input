@@ -1,31 +1,30 @@
-import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-react-input';
+import React from 'react';
+import { View } from 'react-native';
+import TextField from 'react-native-react-input';
+// import { multiply } from 'react-native-react-input';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
+    <View>
+      <TextField />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+//   box: {
+//     width: 60,
+//     height: 60,
+//     marginVertical: 20,
+//   },
+//   input: {
+//       height: 40,
+//       margin: 12,
+//       borderWidth: 1,
+//       padding: 10,
+//     },
+// });
